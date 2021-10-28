@@ -3,21 +3,18 @@
 
 Standard install enables the full features of Jina. 
 
-````{tab} via PyPI
-```shell
-pip install -U jina
-```
-````
-````{tab} via Conda
-```shell
-conda install jina -c conda-forge
-```
-````
-````{tab} via Docker
-```shell
-docker run jinaai/jina:latest
-```
-````
+#### via PyPI
+>```shell
+>pip install -U jina
+>```
+#### via Conda
+>```shell
+>conda install jina -c conda-forge
+>````
+#### via Docker
+>```shell
+>docker run jinaai/jina:latest
+>```
 
 ## More install options
 
@@ -30,112 +27,92 @@ Minimum install enables basic features of Jina, but without support on HTTP, Web
 Minimum install is often used when building & depolying an Executor.
 
 
-````{tab} via PyPI
+#### via PyPI
 
-```shell
-JINA_PIP_INSTALL_CORE=1 pip install jina
-```
+>```shell
+>JINA_PIP_INSTALL_CORE=1 pip install jina
+>```
 
+#### via Conda
 
-````
+>```shell
+>conda install jina-core -c conda-forge
+>```
 
-````{tab} via Conda
+#### via Docker
 
-```shell
-conda install jina-core -c conda-forge
-```
-
-````
-
-````{tab} via Docker
-
-```shell
-docker run jinaai/jina:latest
-```
-
-````
+>```shell
+>docker run jinaai/jina:latest
+>```
 
 ### Minimum but more performant
 
 Same as Minimum install, but also install `uvloop` & `lz4`.
 
 
-````{tab} via PyPI
+#### via PyPI
 
-```shell
-JINA_PIP_INSTALL_PERF=1 pip install jina
-```
+>```shell
+>JINA_PIP_INSTALL_PERF=1 pip install jina
+>```
 
 
-````
+#### via Conda
 
-````{tab} via Conda
+>```shell
+>conda install jina-perf -c conda-forge
+>```
 
-```shell
-conda install jina-perf -c conda-forge
-```
+#### via Docker
 
-````
-
-````{tab} via Docker
-
-```shell
-docker run jinaai/jina:latest-perf
-```
-
-````
+>```shell
+>docker run jinaai/jina:latest-perf
+>```
 
 
 ### With Daemon (JinaD)
 
 Same as Minimum install, but also install `uvloop` & `lz4`.
 
-```shell
-pip install "jina[daemon]"
-```
+>```shell
+>pip install "jina[daemon]"
+>```
 
 
 ### Full development dependencies
 
 
-````{tab} via PyPI
+#### via PyPI
 
-```shell
-pip install "jina[devel]"
-```
+>```shell
+>pip install "jina[devel]"
+>```
 
 
-````
+#### via Docker
 
-````{tab} via Docker
-
-```shell
-docker run jinaai/jina:latest-devel
-```
-
-````
+>```shell
+>docker run jinaai/jina:latest-devel
+>```
 
 
 ### Prerelease
 
 Prerelease is the version always synced with `master` branch of Jina Github repository.
 
-````{tab} via PyPI
+#### via PyPI
 
-```shell
-pip install --pre jina
-```
+>```shell
+>pip install --pre jina
+>```
 
 
-````
+#### via Docker
 
-````{tab} via Docker
+>```shell
+>docker run jinaai/jina:master
+>```
 
-```shell
-docker run jinaai/jina:master
-```
-
-````
 
 
 
