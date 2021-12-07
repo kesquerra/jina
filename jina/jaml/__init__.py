@@ -489,8 +489,8 @@ class JAMLCompatible(metaclass=JAMLCompatibleType):
         :class:`BaseExecutor`, :class:`BaseDriver` and all their subclasses.
 
         Support substitutions in YAML:
-            - Environment variables: `${{ENV.VAR}}` (recommended), ``${{VAR}}``, ``$VAR``.
-            - Context dict (``context``): ``${{VAR}}``(recommended), ``$VAR``.
+            - Environment variables: `${{ENV.VAR}}` (recommended), ``${{VAR}}``.
+            - Context dict (``context``): ``${{VAR}}``(recommended).
             - Internal reference via ``this`` and ``root``: ``${{this.same_level_key}}``, ``${{root.root_level_key}}``
 
         Substitutions are carried in the order and multiple passes to resolve variables with best effort.
@@ -534,6 +534,7 @@ class JAMLCompatible(metaclass=JAMLCompatibleType):
         :param kwargs: kwargs for parse_config_source
         :return: :class:`JAMLCompatible` object
         """
+
         if isinstance(source, str) and os.path.exists(source):
             extra_search_paths = (extra_search_paths or []) + [os.path.dirname(source)]
 
@@ -613,13 +614,10 @@ class JAMLCompatible(metaclass=JAMLCompatibleType):
 
     @classmethod
     def _override_yml_params(cls, raw_yaml, field_name, override_field):
-        if override_field is not None:
-            field_params = raw_yaml.get(field_name, None)
-            if field_params:
-                field_params.update(**override_field)
-                raw_yaml.update(field_params)
-            else:
-                raw_yaml[field_name] = override_field
+        if override_field:
+            field_params = raw_yaml.get(field_name, {})
+            field_params.update(**override_field)
+            raw_yaml[field_name] = field_params
 
     @staticmethod
     def is_valid_jaml(obj: Dict) -> bool:

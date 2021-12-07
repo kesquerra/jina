@@ -22,9 +22,9 @@ Version identifiers [are explained here](https://github.com/jina-ai/jina/blob/ma
 
 ### Minimum
 
-Minimum install enables basic features of Jina, but without support on HTTP, WebSocket, Docker & Hub.
+Minimum install enables basic features of Jina, but without support for HTTP, WebSocket, Docker and Hub.
 
-Minimum install is often used when building & depolying an Executor.
+Minimum install is often used when building and depolying an Executor.
 
 
 #### via PyPI
@@ -47,7 +47,7 @@ Minimum install is often used when building & depolying an Executor.
 
 ### Minimum but more performant
 
-Same as Minimum install, but also install `uvloop` & `lz4`.
+Same as minimum install, but also install `uvloop` and `lz4`.
 
 
 #### via PyPI
@@ -72,7 +72,7 @@ Same as Minimum install, but also install `uvloop` & `lz4`.
 
 ### With Daemon (JinaD)
 
-Same as Minimum install, but also install `uvloop` & `lz4`.
+Same as minimum install, but also install `uvloop` and `lz4`.
 
 >```shell
 >pip install "jina[daemon]"
@@ -98,7 +98,7 @@ Same as Minimum install, but also install `uvloop` & `lz4`.
 
 ### Prerelease
 
-Prerelease is the version always synced with `master` branch of Jina Github repository.
+Prerelease is the version always synced with the `master` branch of Jina's GitHub repository.
 
 #### via PyPI
 

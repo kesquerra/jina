@@ -1,5 +1,5 @@
 (flow-topology)=
-# Topology
+# Distributed & Parallel Execution
 
 The topology of a Flow defines how information is distributed between all Executors.
 
@@ -21,7 +21,7 @@ f = (Flow()
      .needs(['p1', 'p2', 'p3'], name='r1'))
 ```
 
-```{figure} ../../../.github/simple-plot3.svg
+```{figure} simple-flow.svg
 :align: center
 ```
 
